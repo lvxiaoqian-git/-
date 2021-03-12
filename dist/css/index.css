@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+div{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header{
+    width: 100vw;
+    height: 18.75rem;
+    background-color: #4c641c;
+}
+
+@media screen and (max-width: 420px) {
+    header{ 
+    background-color: #11B7B9;
+    width: 100vw;
+    height: 12.5rem;
+  }
+}

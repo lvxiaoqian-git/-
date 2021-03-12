@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/markdown-it/12.0.3/markdown-it.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+    <div id="box">a</div>
+    <div id="box1">a</div>
+    <a href=""></a>
+    <script type="text/javascript">
+    let md = window.markdownit();
+    console.log(md)
+    res = md.render('# markdown-it rulezz!');
+        
+    let oBox = document.getElementById('box');
+    oBox.innerHTML = res;
+        
+    $(document).ready(function(){
+
+        
+        $.get('../md/one.md',data=>{
+            console.log(data)
+            // 解析引入的md
+            res = md.render(data)
+            // 将解析后的md渲染到页面
+            $('#box').append(res)
+        })
+
+        $.get('../md/two.md',data=>{
+            console.log(data)
+            // 解析引入的md
+            res = md.render(data)
+            // 将解析后的md渲染到页面
+            $('#box1').append(res)
+        })
+
+    })
+    </script>
+</body>
+</html>
