@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: beige;
+}
+#box{
+    width: 100%;
+    height: 600%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#box>header{
+    position: relative;
+    width: 100vw;
+    height: 18.75rem;
+    background-color: #a5ac97;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../img/0.jpg");
+    background-position: center;
+    background-size:cover;
+}
+#box>header>div{
+    width: 100%;
+    height: 100%;
+}
+#box>header:hover{
+    transition: all 1s;
+    background-image: url("../../img/2.png");
+}
+
+#box>header>.name{
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: "楷体";
+}
+#box>header>nav{
+    position: absolute;
+    bottom: .625rem;
+}
+#box>header>nav>ul{
+    list-style: none;
+    display: flex;
+}
+#box>header>nav>ul>li{
+    padding: 5px;
+    cursor: pointer;
+}
+#box>header>nav>ul>li:hover{
+    color: rgba(193, 235, 248, 0.8);
+}
+#box>.soushou{
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    top: 0;
+    right: 0;
+    background-color: #52c9d1;
+}
+#box>.content{
+    height: 500vh;
+    background-color: #251c1c;
+}
+
+
+
+/* @media screen and (max-width: 420px) {
+    header{ 
+    background-color: #11B7B9;
+    width: 100vw;
+    height: 12.5rem;
+  }
+} */
